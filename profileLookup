@@ -31,19 +31,16 @@ var contacts = [
 function lookUpProfile(firstName, prop){
 // Only change code below this line
   for (i = 0; i < contacts.length; i++) {
-    if (firstName == contacts[i].firstName && contacts[i].hasOwnProperty(prop) === true) {
-        return contacts[i][prop];
+    if (firstName == contacts[i].firstName) {
+        if (contacts[i].hasOwnProperty(prop)) {
+            return contacts[i][prop];
+        }
+        else {
+            return "No such property";
+        }
+    
     }
-    else if (firstName == contacts[i].firstName && contacts[i].hasOwnProperty(prop) !== true) {
-        return "No such property";
-    }
-    else {
-        return "No such contact";
-    }
-    }
-      
-      
- 
+  }
 // Only change code above this line
 }
 
