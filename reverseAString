@@ -1,0 +1,10 @@
+myArray = [];
+revArray = [];
+function reverseString(str) {
+  myArray.push(str.split(""));
+  revArray = myArray.reverse();
+  str = revArray.join('');
+  return str;
+}
+
+reverseString("hello");
