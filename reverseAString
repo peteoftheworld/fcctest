@@ -1,9 +1,8 @@
-myArray = [];
-revArray = [];
+var myArray = null;
 function reverseString(str) {
-  myArray.push(str.split(""));
-  revArray = myArray.reverse();
-  str = revArray.join('');
+  myArray = str.split("");
+  myArray.reverse();
+  str = myArray.join('');
   return str;
 }
 
