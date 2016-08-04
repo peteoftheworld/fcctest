@@ -1,10 +1,9 @@
-myArray = [];
-revArray = [];
-function reverseString(str) {
-  myArray.push(str.split(""));
-  revArray = myArray.reverse();
-  str = revArray.join('');
-  return str;
+var reverseArray = [];
+function rev(str) {
+  reverseArray.push(str.split(""));
 }
-
-reverseString("hello");
+rev("hello");
+var reversedArray = [];
+reversedArray = reverseArray.reverse();
+var reversal = reversedArray.join('');
+console.log(reversal);
