@@ -1,5 +1,6 @@
 var splitArray = null;
 function titleCase(str) {
+  str = str.toLowerCase();
   splitArray = str.split(" ");
   for (var i = 0; i < splitArray.length; i++) {
     var letters = splitArray[i].split("");
