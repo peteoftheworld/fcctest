@@ -1,0 +1,21 @@
+
+function mutation(arr) {
+  var firstValue = arr[0].toLowerCase();
+  var secondValue = arr[1].toLowerCase();
+  for (var i = 0; i < arr.length; i++) {
+    if (firstValue.indexOf(secondValue[i]) < 0) {
+    return false;
+    }
+}
+  return true;
+}
+
+mutation(["hello", "hey"]);
+mutation(["hello", "Hello"]);
+mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]);
+mutation(["Mary", "Army"]);
+mutation(["Mary", "Aarmy"]);
+mutation(["Alien", "line"]);
+mutation(["floor", "for"]);
+mutation(["hello", "neo"]);
+mutation(["voodoo", "no"]);
