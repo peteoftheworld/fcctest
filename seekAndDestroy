@@ -1,12 +1,12 @@
 
 function destroyer(arr) {
   // Remove all the values
-  var destroyedArray = [];
-  for (var i = 1; i < arguments.length; i++) {
-    destroyedArray.push(arguments[i]);
-  }
+  var args = Array.prototype.slice.call(arguments);
+  var destroyedArray = args.slice(1, arguments.length);
   
-  return arr;
+  return arr.filter(function(element) {
+    return args.indexOf(element) === -1;
+  });
 }
 
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
