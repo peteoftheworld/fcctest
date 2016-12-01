@@ -1,0 +1,12 @@
+// this just sorts the array properly (lexilogical) and not by Unicode. Need to create the proper insertion function.
+function getIndexToIns(arr, num) {
+  function sortArray(a, b) {
+    return a - b;
+  }
+  arr.sort(sortArray);
+  
+  
+  return num;
+}
+
+getIndexToIns([40, 60, 1, 12, 3], 50);
