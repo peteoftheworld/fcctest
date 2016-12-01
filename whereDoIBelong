@@ -6,7 +6,7 @@ function getIndexToIns(arr, num) {
   arr.sort(sortArray);
   
   
-  return num;
+  return arr.indexOf(num);
 }
 
 getIndexToIns([40, 60, 1, 12, 3], 50);
