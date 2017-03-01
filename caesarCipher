@@ -1,22 +1,23 @@
 //DOES NOT WORK YET
+//SPLITS STRING INTO AN ARRAY AND TRANSFORMS TO UNICODE
+//ITERATES THROUGH ARRAY AND SHIFTS VALUE
+//TODO: MUST CONVERT UNICODE BACK TO CHARACTERS AND JOIN ARRAY INTO A STRING
 function rot13(str) { // LBH QVQ VG!
-  //SPLITS STRING INTO ARRAY AND TRANSFORMS TO UNICODE
+  
   str = str.split('');
   var str2 = [];
   for (var i = 0; i < str.length; i++) {
     str[i] = str[i].charCodeAt(str[i]);
   }
-  
-  //NEEDS TO ITERATE THROUGH ARRAY TO SHIFT VALUE AND THEN TRANSFORM BACK INTO STRING
   for (var i = 0; i < str.length; i++) {
   if (str[i] < 65 || str[i] > 90) {
-    return str[i].fromCharCode(str[i]);
+    str[i] = str[i];
   }
   else if (str[i] < 78) {
-    return (str[i] + 13).fromCharCode(str[i]);
+    str[i] = str[i] + 13;
   }
   else {
-    return (str[i] - 13).fromCharCode(str[i]);
+    str[i] = (str[i] - 13);
   }
 }
 }
