@@ -1,8 +1,7 @@
-//DOES NOT WORK YET
 //SPLITS STRING INTO AN ARRAY AND TRANSFORMS TO UNICODE
 //ITERATES THROUGH ARRAY AND SHIFTS VALUE
 //CONVERTS UNICODE BACK TO CHARACTERS
-//TODO: JOIN ARRAY INTO A STRING
+//JOINS ARRAY INTO A STRING
 function rot13(str) { // LBH QVQ VG!
   
   str = str.split('');
@@ -24,6 +23,7 @@ function rot13(str) { // LBH QVQ VG!
   for (var i = 0; i < str.length; i++) {
     str[i] = String.fromCharCode(str[i]);
   }
+  str = str.join('');
 }
 // Change the inputs below to test
 rot13("SERR PBQR PNZC");
