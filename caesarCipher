@@ -1,13 +1,16 @@
 //DOES NOT WORK YET
-
 function rot13(str) { // LBH QVQ VG!
-  
-  splitString = str.split('');
-  for (var i = 0; i < splitString.length; i++) {
+  //SPLITS STRING INTO ARRAY AND TRANSFORMS TO UNICODE
+  str = str.split('');
+  var str2 = [];
+  for (var i = 0; i < str.length; i++) {
     str[i] = str[i].charCodeAt(str[i]);
+  }
   
-  if (splitString[i] < 65 || splitString[i] > 90) {
-    return splitString[i].fromCharCode(str[i]);
+  //NEEDS TO ITERATE THROUGH ARRAY TO SHIFT VALUE AND THEN TRANSFORM BACK INTO STRING
+  for (var i = 0; i < str.length; i++) {
+  if (str[i] < 65 || str[i] > 90) {
+    return str[i].fromCharCode(str[i]);
   }
   else if (str[i] < 78) {
     return (str[i] + 13).fromCharCode(str[i]);
